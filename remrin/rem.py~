@@ -1,0 +1,11 @@
+#透過ウインドウ内にレムを表示するプログラム
+
+import wx
+
+class AppFrame(wx.Frame):
+    def __init__(self):
+        wx.Frame.__init__(self, None, title="Am I Transparent?", style=wx.DEFAULT_FRAME_STYLE | wx.STAY_ON_TOP)
+        self.SetTransparent(1)
+app = wx.App(False)
+AppFrame().Show()
+app.MainLoop()
